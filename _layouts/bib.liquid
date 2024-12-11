@@ -61,6 +61,9 @@
         {% assign author_is_self = false %}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
+        <p>Checking author0: {{ author_last_name }}</p>
+        <p>scholar.last_name: {{ site.scholar.last_name }}</p>
+        
         {% if site.scholar.last_name contains author_last_name %}
           {% if site.scholar.first_name contains author.first %}
             {% assign author_is_self = true %}
@@ -69,6 +72,7 @@
 
       <!-- Debug output -->
       <p>Checking author: {{ author.first }} {{ author.last }}</p>
+      <p>Checking author 2: {{ author.first }} {{ author.last }}</p>
 
       {% if site.scholar.last_name contains author_last_name %}
         {% if site.scholar.first_name contains author.first %}
