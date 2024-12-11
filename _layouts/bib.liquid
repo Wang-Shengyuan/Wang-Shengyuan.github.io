@@ -66,6 +66,19 @@
             {% assign author_is_self = true %}
           {% endif %}
         {%- endif -%}
+
+      <!-- Debug output -->
+      <p>Checking author: {{ author.first }} {{ author.last }}</p>
+
+      {% if site.scholar.last_name contains author_last_name %}
+        {% if site.scholar.first_name contains author.first %}
+          {% assign author_is_self = true %}
+        {% endif %}
+      {% endif %}
+
+      <!-- Debug output for author_is_self -->
+      <p>author_is_self: {{ author_is_self }}</p>
+
         {% assign coauthor_url = null %}
         {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
         {% if site.data.coauthors[clean_last_name] %}
