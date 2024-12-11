@@ -313,8 +313,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Shengyuan, S.]
-  first_name: [Wang, W.]
+  last_name: [Wang, W.]
+  first_name: [Shengyuan, S.]
 
   style: apa
   locale: en
