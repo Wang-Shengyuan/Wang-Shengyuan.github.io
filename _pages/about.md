@@ -22,4 +22,4 @@ I am a 4th-year undergraduate student at the Department of Computer Science and 
 My research interest is applied machine learning, which means advancing AI solutions for nature and humanity. Specifically, I am focusing on
 Large Language Model and their application in natural language processing and computational social science.
 
-I am fortunate to be advised by Prof. [Yong Li](https://fi.ee.tsinghua.edu.cn/~liyong/) currently. In the last few years, I had the invaluable opportunity to join Chicago Human+AI Group, CoAI Group and Knowledge Engeneering Group.
+I am fortunate to be advised by Prof. [Yong Li](https://fi.ee.tsinghua.edu.cn/~liyong/) currently. In the last few years, I had the invaluable opportunity to join [Chicago Human+AI Group](https://chicagohai.github.io/), [CoAI Group](https://coai.cs.tsinghua.edu.cn/) and [Knowledge Engeneering Group](https://keg.cs.tsinghua.edu.cn/).
