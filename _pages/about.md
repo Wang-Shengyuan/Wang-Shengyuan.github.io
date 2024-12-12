@@ -17,8 +17,9 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a 4th-year undergraduate student at the Department of Computer Science and Technology of Tsinghua University.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research interest is applied machine learning, which means advancing AI solutions for nature and humanity. Specifically, I am focusing on
+Large Language Model and their application in natural language processing and computational social science.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am fortunate to be advised by Prof. [Yong Li](https://fi.ee.tsinghua.edu.cn/~liyong/) currently. In the last few years, I had the invaluable opportunity to join Chicago Human+AI Group, CoAI Group and Knowledge Engeneering Group.
