@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Tsinghua University</a>.
+subtitle: Undergraduate Student, <a href='#'>Tsinghua University</a>.
 
 profile:
   align: right
@@ -17,9 +17,8 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am currently a fourth-year undergraduate student at the Department of Computer Science and Technology, Tsinghua University. 
+I am currently a fourth-year undergraduate student in the Department of Computer Science and Technology at Tsinghua University. 
 
-My research interests lie in applied machine learning, with a focus on advancing AI solutions for the benefit of nature and humanity. Specifically, I am focusing on
-Large Language Model and their application in natural language processing and computational social science.
+My research interests are centered on applied machine learning, with a particular focus on advancing AI methodologies to enhance human knowledge and welfare. Specifically, my work investigates Large Language Models and their application in natural language processing and computational social science.
 
-I am fortunate to be advised by [Prof. Yong Li](https://fi.ee.tsinghua.edu.cn/~liyong/) currently. In the last few years, I have had the privilege of collaborating with renowned research groups, including the [Chicago Human+AI Group](https://chicagohai.github.io/), [CoAI Group](https://coai.cs.tsinghua.edu.cn/) and [Knowledge Engineering Group](https://keg.cs.tsinghua.edu.cn/). These experiences have been invaluable in shaping my academic and professional journey.
+I am fortunate to be advised by [Prof. Yong Li](https://fi.ee.tsinghua.edu.cn/~liyong/). In the last few years, I have had the privilege of being a member of several distinguished research groups, including the [Chicago Human+AI Lab](https://chicagohai.github.io/), the [Conversational AI Group](https://coai.cs.tsinghua.edu.cn/) and the [Knowledge Engineering Group](https://keg.cs.tsinghua.edu.cn/). These experiences have been invaluable in shaping my academic and professional journey.
