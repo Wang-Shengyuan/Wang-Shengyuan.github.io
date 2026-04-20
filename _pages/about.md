@@ -23,7 +23,7 @@ My research interests are centered on
 
 - Multimodal Learning: Knowledge understanding and generation at the intersection of vision and language.
 
-- AI for Science & Social Good: Applying state-of-the-art AI to drive breakthroughs in both natural and social sciences, ultimately enhancing human welfare.
+- AI for Science & Social Good: Developing and applying state-of-the-art AI to drive breakthroughs in both natural and social sciences.
 
 - Cognitive Intelligence: Exploring the core computational principles of intelligence, including perception, reasoning, memory, and emotion.
 
