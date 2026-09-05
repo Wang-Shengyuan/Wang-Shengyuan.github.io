@@ -1,6 +1,9 @@
 name: Deploy site
 
 on:
+  schedule:
+    # Rebuild daily at 01:00 UTC (09:00 Beijing time) to refresh GitHub repo card stats
+    - cron: "0 1 * * *"
   push:
     branches:
       - master
@@ -80,6 +83,8 @@ jobs:
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
       - name: Install and Build 🔧
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pip3 install --upgrade jupyter
           export JEKYLL_ENV=production
