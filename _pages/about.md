@@ -17,7 +17,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am currently a first-year doctoral student in the College of AI at Tsinghua University. I am fortunate to be advised by [Prof. Yong Li](https://fi.ee.tsinghua.edu.cn/~liyong/).
+I am currently a second-year doctoral student in the College of AI at Tsinghua University. I am fortunate to be advised by [Prof. Yong Li](https://fi.ee.tsinghua.edu.cn/~liyong/).
 
 My research interests are centered on 
 

@@ -4,10 +4,8 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
+  - tsinghua-fib-lab/UrbanLLaVA
+  - tsinghua-fib-lab/GeospatialHallucination
   - THUDM/AlignBench
-  # - jekyll/jekyll
-  # - twbs/bootstrap
-  # - jquery/jquery
-  # - FortAwesome/Font-Awesome
-  # - mathjax/MathJax
-  # - jpswalsh/academicons
+  - thu-coai/CritiqueLLM
+  - ChicagoHAI/CLEAR-evaluator

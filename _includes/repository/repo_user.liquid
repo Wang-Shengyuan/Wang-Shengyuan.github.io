@@ -1,14 +1,23 @@
-<div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.username }}">
-    <img
-      class="repo-img-light w-100"
-      alt="{{ include.username }}"
-      src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&show_icons=true"
-    >
-    <img
-      class="repo-img-dark w-100"
-      alt="{{ include.username }}"
-      src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&show_icons=true"
-    >
+{% assign data = site.data.github_cards.users[include.username] %}
+
+<div class="repo p-2">
+  <a class="repo-card" href="https://github.com/{{ include.username }}">
+    <div class="repo-card-title">
+      {% if data and data.avatar %}
+        <img class="repo-card-avatar" src="{{ data.avatar }}" alt="{{ include.username }}">
+      {% else %}
+        <i class="fa-brands fa-github"></i>
+      {% endif %}
+      {{ data.name | default: include.username }}
+    </div>
+    {% if data %}
+      {% if data.bio and data.bio != "" %}
+        <div class="repo-card-desc" style="-webkit-line-clamp: 2;">{{ data.bio }}</div>
+      {% endif %}
+      <div class="repo-card-meta">
+        <span class="repo-card-meta-item"><i class="fa-solid fa-users"></i> {{ data.followers }} followers</span>
+        <span class="repo-card-meta-item"><i class="fa-regular fa-bookmark"></i> {{ data.public_repos }} repos</span>
+      </div>
+    {% endif %}
   </a>
 </div>

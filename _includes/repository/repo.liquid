@@ -11,17 +11,28 @@
   {% assign max_lines = 2 %}
 {% endif %}
 
-<div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.repository }}">
-    <img
-      class="repo-img-light w-100"
-      alt="{{ include.repository }}"
-      src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_light }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
-    >
-    <img
-      class="repo-img-dark w-100"
-      alt="{{ include.repository }}"
-      src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
-    >
+{% assign data = site.data.github_cards.repos[include.repository] %}
+
+<div class="repo p-2">
+  <a class="repo-card" data-repo="{{ include.repository }}" href="https://github.com/{{ include.repository }}">
+    <div class="repo-card-title">
+      <i class="fa-regular fa-bookmark"></i>
+      {% if show_owner %}<span class="repo-card-owner">{{ repo_url[0] }}/</span>{% endif %}{{ repo_url[1] }}
+    </div>
+    {% if data.description and data.description != "" %}
+      <div class="repo-card-desc" style="-webkit-line-clamp: {{ max_lines }};">{{ data.description }}</div>
+    {% endif %}
+    <div class="repo-card-meta">
+      {% if data.language %}
+        <span class="repo-card-meta-item">
+          <span class="repo-card-lang-dot" style="background-color: {{ data.language_color }};"></span>{{ data.language }}
+        </span>
+      {% endif %}
+      <span class="repo-card-meta-item"><i class="fa-regular fa-star"></i> <span data-live-stars>{{ data.stars | default: "–" }}</span></span>
+      <span class="repo-card-meta-item"><i class="fa-solid fa-code-fork"></i> <span data-live-forks>{{ data.forks | default: "–" }}</span></span>
+      {% if data.archived %}
+        <span class="repo-card-meta-item repo-card-archived">Archived</span>
+      {% endif %}
+    </div>
   </a>
 </div>

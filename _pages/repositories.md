@@ -45,4 +45,6 @@ nav_order: 4
     {% include repository/repo.liquid repository=repo %}
   {% endfor %}
 </div>
+
+<script defer src="{{ '/assets/js/github-cards-live.js' | relative_url }}"></script>
 {% endif %}
