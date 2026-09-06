@@ -1,0 +1,33 @@
+{% assign email_local_part = include.email | email_local %}
+{% assign email_domain_part = include.email | email_domain %}
+{% if site.protect_email and email_local_part != '' and email_domain_part != '' %}
+  <a
+    class="al-email-protect"
+    href="#"
+    role="button"
+    title="{{ include.title | default: 'Copy email to clipboard' }}"
+    data-eu="{{ email_local_part | escape }}"
+    data-ed="{{ email_domain_part | escape }}"
+  >
+    {%- if include.icon -%}
+      <i class="fa-solid fa-envelope"></i>
+    {%- else -%}
+      <span class="al-email-text">{{ email_local_part | escape }}</span><span class="al-email-sep"> [at] </span>
+      {%- assign domain_labels = email_domain_part | split: '.' -%}
+      {%- for label in domain_labels -%}
+        <span class="al-email-text">{{ label | escape }}</span>
+        {%- unless forloop.last -%}
+          <span class="al-email-sep"> [dot] </span>
+        {%- endunless -%}
+      {%- endfor -%}
+    {%- endif -%}
+  </a>
+{% else %}
+  <a href="mailto:{{ include.email | encode_email }}" title="{{ include.title | default: 'email' }}">
+    {%- if include.icon -%}
+      <i class="fa-solid fa-envelope"></i>
+    {%- else -%}
+      {{ include.email }}
+    {%- endif -%}
+  </a>
+{% endif %}

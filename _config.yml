@@ -7,6 +7,7 @@ first_name: Shengyuan
 # middle_name: R.
 last_name: Wang
 email: admin@shengyuan.info
+protect_email: true # split the address at build time; click copies instead of mailto:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Shengyuan's homepage.
 footer_text: >
@@ -16,6 +17,7 @@ footer_text: >
 keywords: shengyuan, tsinghua, THU, AI, LLM, Deep Learning, computer science, jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+apple_touch_icon: apple-touch-icon.png # iOS home-screen icon; emoji favicons are ignored by Safari
 
 url: https://Wang-Shengyuan.github.io # the base hostname & protocol for your site
 baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -27,11 +29,15 @@ back_to_top: true # set to false to disable the back to top button
 # Theme
 # -----------------------------------------------------------------------------
 
-# repo color theme
-repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
-repo_theme_dark: dark # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+# Repository cards are rendered as themed HTML from the GitHub API
+# (_plugins/github-repo-cards.rb), not as third-party card images.
+# Upstream al-folio v1.1 switched the old image service from
+# github-readme-stats to github-stats-extended; this site does not use
+# either, because those Vercel apps are frequently down.
+repo_theme_light: default
+repo_theme_dark: dark
 repo_trophies:
-  enabled: true
+  enabled: false # github-profile-trophy public instance returns 402
   theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
   theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
 
@@ -63,9 +69,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+og_image: /assets/img/mypic.jpg # site-wide Open Graph preview (must resolve to an absolute URL)
 
 # -----------------------------------------------------------------------------
 # Social integration

@@ -1,5 +1,5 @@
 {% if site.email %}
-  <a href="mailto:{{ site.email | encode_email }}" title="email"><i class="fa-solid fa-envelope"></i></a>
+  {% include email_protect_link.liquid email=site.email title="email" icon=true %}
 {% endif %}
 {% if site.telegram_username %}
   <a href="https://telegram.me/{{ site.telegram_username }}" title="telegram"><i class="fa-brands fa-telegram"></i></a>

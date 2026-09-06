@@ -1,0 +1,3 @@
+{% if site.protect_email %}
+  <script defer src="{{ '/assets/js/email-protect.js' | relative_url | bust_file_cache }}"></script>
+{% endif %}

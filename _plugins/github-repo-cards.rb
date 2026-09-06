@@ -5,7 +5,8 @@ require "uri"
 # Fetches GitHub repository/user metadata at build time and exposes it as
 # site.data["github_cards"], so repository cards can be rendered as plain
 # themed HTML instead of relying on third-party card image services
-# (github-readme-stats.vercel.app), which are frequently rate-limited or down.
+# (github-readme-stats / github-stats-extended on Vercel), which are
+# frequently rate-limited or down.
 #
 # Set GITHUB_TOKEN (or JEKYLL_GITHUB_TOKEN) to authenticate API requests.
 module GithubRepoCards
