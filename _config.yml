@@ -453,10 +453,7 @@ enable_video_embedding: false # enables video embedding for bibtex entries. If f
 # The integrity hash is used to ensure that the library is not tampered with.
 # Integrity hashes not provided by the libraries were generated using https://www.srihash.org/
 third_party_libraries:
-  # Build-time vendor into /assets/libs/ so visitors do not wait on
-  # fonts.googleapis.com / jsdelivr / cdnjs (often slow or blocked in China).
-  # The files are gitignored and downloaded during `jekyll build` in CI.
-  download: true
+  download: false # if true, download the versions of the libraries specified below and use the downloaded files
   bootstrap-table:
     integrity:
       css: "sha256-uRX+PiRTR4ysKFRCykT8HLuRCub26LgXJZym3Yeom1c="
