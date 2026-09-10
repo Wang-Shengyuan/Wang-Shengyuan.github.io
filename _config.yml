@@ -19,7 +19,7 @@ lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 apple_touch_icon: apple-touch-icon.png # iOS home-screen icon; emoji favicons are ignored by Safari
 
-url: https://Wang-Shengyuan.github.io # the base hostname & protocol for your site
+url: https://shengyuan.info # the base hostname & protocol for your site
 baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -453,7 +453,10 @@ enable_video_embedding: false # enables video embedding for bibtex entries. If f
 # The integrity hash is used to ensure that the library is not tampered with.
 # Integrity hashes not provided by the libraries were generated using https://www.srihash.org/
 third_party_libraries:
-  download: false # if true, download the versions of the libraries specified below and use the downloaded files
+  # Build-time vendor into /assets/libs/ so visitors do not wait on
+  # fonts.googleapis.com / jsdelivr / cdnjs (often slow or blocked in China).
+  # The files are gitignored and downloaded during `jekyll build` in CI.
+  download: true
   bootstrap-table:
     integrity:
       css: "sha256-uRX+PiRTR4ysKFRCykT8HLuRCub26LgXJZym3Yeom1c="

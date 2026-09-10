@@ -15,6 +15,7 @@ profile:
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
+math: false # homepage has no TeX; skip MathJax + polyfill CDN on the first paint
 ---
 
 I am currently a second-year doctoral student in the College of AI at Tsinghua University. I am fortunate to be advised by [Prof. Yong Li](https://fi.ee.tsinghua.edu.cn/~liyong/).
